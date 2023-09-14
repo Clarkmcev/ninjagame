@@ -7,6 +7,7 @@
         "KEYUP",
         "offgrid",
         "pygame",
+        "rects",
         "tilemap"
     ]
 }
