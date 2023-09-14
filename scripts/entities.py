@@ -19,6 +19,7 @@ class PhysicsEntity:
         self.pos[0] += frame_movement[0]
         # collision x axis
         entity_rect = self.rect()
+        print(entity_rect)
         for rect in tilemap.physics_rects_around(self.pos):
             if entity_rect.colliderect(rect):
                 if frame_movement[0] > 0:
@@ -33,11 +34,10 @@ class PhysicsEntity:
         for rect in tilemap.physics_rects_around(self.pos):
             if entity_rect.colliderect(rect):
                 if frame_movement[1] > 0:
-                    print('here')
                     entity_rect.bottom = rect.top
                 if frame_movement[1] < 0:
                      entity_rect.top = rect.bottom
-                self.pos[1] = entity_rect.x
+                self.pos[1] = entity_rect.y
 
     def render(self, surf):
         surf.blit(self.game.assets['player'], self.pos)
