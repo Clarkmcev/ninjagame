@@ -38,5 +38,6 @@ class PhysicsEntity:
                      entity_rect.top = rect.bottom
                 self.pos[1] = entity_rect.y
 
+    # this is rendering the player
     def render(self, surf):
         surf.blit(self.game.assets['player'], self.pos)
