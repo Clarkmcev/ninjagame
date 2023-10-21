@@ -19,7 +19,6 @@ class PhysicsEntity:
         self.pos[0] += frame_movement[0]
         # collision x axis
         entity_rect = self.rect()
-        print(entity_rect)
         for rect in tilemap.physics_rects_around(self.pos):
             if entity_rect.colliderect(rect):
                 if frame_movement[0] > 0:
